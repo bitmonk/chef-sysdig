@@ -21,7 +21,7 @@
 
 apt_repository 'sysdig' do
   uri 'http://download.draios.com/stable/deb'
-  components ['stable-$(ARCH)']
+  components ['stable-$(ARCH)/']
   key 'EC51E8C4'
   keyserver 'keyserver.ubuntu.com'
 end
