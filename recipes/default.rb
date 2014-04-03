@@ -16,3 +16,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+# Based on https://github.com/draios/sysdig/wiki/How%20to%20Install%20Sysdig%20for%20Linux
+
+apt_repository 'sysdig' do
+  uri 'http://download.draios.com/stable/deb'
+  components ['stable-$(ARCH)']
+  key 'EC51E8C4'
+  keyserver 'keyserver.ubuntu.com'
+end
+
+package "linux-headers-#{node['kernel']['release']}" 
+
+package 'sysdig'
+
